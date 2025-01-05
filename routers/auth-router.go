@@ -8,13 +8,13 @@ import (
 func SetupAuthicationRoutes() *mux.Router {
 	router := mux.NewRouter()
    
-	router.HandleFunc("/register",controllers.Register).Methods("POST")
+	router.HandleFunc("/register",controllers.RegisterUser).Methods("POST")
 
-	router.HandleFunc("/login",controllers.Login).Methods("POST")
+	router.HandleFunc("/login",controllers.LoginUser).Methods("POST")
 	
-	router.HandleFunc("/refresh",controllers.Refresh).Methods("POST")
+	router.HandleFunc("/refresh",controllers.RefreshUser).Methods("POST")
 	
-	router.HandleFunc("/logout",controllers.Logout).Methods("POST")
+	router.HandleFunc("/logout",controllers.LogoutUser).Methods("POST")
 
 	return router
 }
