@@ -10,7 +10,7 @@ func SetupProfileRoutes() *mux.Router {
 
 	router.HandleFunc("/profile/{id}",controllers.GetProfile).Methods("GET")
 	router.HandleFunc("/profile",controllers.RegisterProfile).Methods("POST")
-	router.HandleFunc("/profile",controllers.UpdateProfile).Methods("PUT")
+	router.HandleFunc("/profile/{id}",controllers.UpdateProfile).Methods("PUT")
 
 	return router
 }

@@ -57,9 +57,9 @@ Esta API permite monitorar o consumo diário de água de acordo com as necessida
 ### **Perfil do Usuário**
 - **GET** `/profile` - Obter dados do perfil.
 - **PUT** `/profile` - Atualizar informações pessoais.
-
+- **POST** `/profile` - registrar informações pessoais.
 ### **Consumo de Água**
-- **GET** `/water-intake` - Obter progresso diário e meta.
+- **GET** `/water-intake/{id}` - Obter progresso diário e meta.
 - **POST** `/water-intake` - Registrar consumo de água.
 - **PUT** `/water-intake/{id}` - Atualizar registro de consumo.
 - **DELETE** `/water-intake/{id}` - Excluir registro de consumo.
