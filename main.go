@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	database "github.com/eduardonakaidev/drink-water-api/config"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	// Inicializa o banco de dados
+	database.InitDatabase()
+
+	// Inicia as migrations
+	database.Migrate()
 }
