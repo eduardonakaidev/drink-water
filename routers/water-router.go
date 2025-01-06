@@ -5,8 +5,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func SetupWaterRouters() *mux.Router {
-	router := mux.NewRouter()
+func SetupWaterRoutes(router *mux.Router) *mux.Router {
 	router.HandleFunc("/water-intake/{id}",controllers.GetWatersIntakes).Methods("GET")
 	router.HandleFunc("/water-intake",controllers.RegisterWaterIntake).Methods("POST")
 	router.HandleFunc("/water-intake/{id}",controllers.UpdateWaterIntake).Methods("PUT")

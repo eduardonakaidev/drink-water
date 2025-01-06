@@ -5,8 +5,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func SetupAuthicationRoutes() *mux.Router {
-	router := mux.NewRouter()
+func SetupAuthicationRoutes(router *mux.Router) *mux.Router {
+	
    
 	router.HandleFunc("/register",controllers.RegisterUser).Methods("POST")
 

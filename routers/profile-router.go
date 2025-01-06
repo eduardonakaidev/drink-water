@@ -5,9 +5,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func SetupProfileRoutes() *mux.Router {
-	router := mux.NewRouter()
-
+func SetupProfileRoutes(router *mux.Router) *mux.Router {
 	router.HandleFunc("/profile/{id}",controllers.GetProfile).Methods("GET")
 	router.HandleFunc("/profile",controllers.RegisterProfile).Methods("POST")
 	router.HandleFunc("/profile/{id}",controllers.UpdateProfile).Methods("PUT")
